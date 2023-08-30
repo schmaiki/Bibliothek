@@ -10,32 +10,31 @@ public class User
 
     [MaxLength(100)]
     [Required]
-    public string Vorname { get; set; }
+    public string Vorname { get; set; } = String.Empty;
 
     [MaxLength(100)]
     [Required]
-    public string Nachname { get; set; }
+    public string Nachname { get; set; } = String.Empty;
 
     [MaxLength(100)]
-    public string Geburtsname { get; set; }
+    public string Geburtsname { get; set; } = String.Empty;
 
     [DataType(DataType.Date)]
     public DateOnly Geburtsdatum { get; set; }
 
     [MaxLength(20)]
-    public string Geschlecht { get; set; }
+    public string Geschlecht { get; set; } =String.Empty;
 
-    [MaxLength(150)]
-    public string Strasse { get; set; }
+    [MaxLength(150)] public string Strasse { get; set; } = String.Empty;
 
     [MaxLength(5)]
-    public string Hausnummer { get; set; }
+    public string Hausnummer { get; set; } = String.Empty;
 
     [DataType(DataType.PostalCode)]
     public int PLZ { get; set; }
 
     [MaxLength(100)]
-    public string Ort { get; set; }
+    public string Ort { get; set; } = String.Empty;
 
     [DataType(DataType.EmailAddress)]
     [EmailAddress]
@@ -51,7 +50,7 @@ public class User
     public DateOnly Aufenthaltsgenehmigung { get; set; }
 
     [MaxLength(100)]
-    public string Nationalitaet { get; set; }
+    public string Nationalitaet { get; set; } = String.Empty;
 
     [InverseProperty("User")]
     public virtual ICollection<Buch.Buch> Buch { get; set; } = new HashSet<Buch.Buch>();
