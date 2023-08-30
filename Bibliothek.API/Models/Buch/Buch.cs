@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Bibliothek.API.DataTypes;
 
 namespace Bibliothek.API.Models.Buch;
 
@@ -11,9 +12,8 @@ public class Buch
     [Required]
     public string Titel { get; set; }
 
-    [MaxLength(100)]
     [Required]
-    public string ISBN { get; set; }
+    public ISBN ISBN { get; set; }
 
     [Required]
     [DataType(DataType.Date)]
