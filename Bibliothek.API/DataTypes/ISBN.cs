@@ -1,6 +1,6 @@
 ﻿namespace Bibliothek.API.DataTypes;
 
-public struct ISBN
+public class ISBN
 {
     private readonly string _value;
 

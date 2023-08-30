@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Bibliothek.API.DataTypes;
+using Bibliothek.API.Models.Ausweis;
 
 namespace Bibliothek.API.Models.Buch;
 
@@ -23,4 +25,7 @@ public class Buch
     public Sprache Sprache { get; set; }
 
     public Author.Author Author { get; set; }
+
+    [InverseProperty("User")]
+    public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
 }
