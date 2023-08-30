@@ -10,14 +10,11 @@ public class Buch
 
     [MaxLength(100)]
     [Required]
-    public string Titel { get; set; }
+    public string Titel { get; set; } = String.Empty;
 
-    [Required]
-    public ISBN ISBN { get; set; }
+    [Required] public ISBN ISBN { get; set; } = new ISBN("978-1-234567-89-0");
 
-    [Required]
-    [DataType(DataType.Date)]
-    public DateOnly Erscheinungsdatum { get; set; }
+    [Required] [DataType(DataType.Date)] public DateOnly Erscheinungsdatum { get; set; } = new DateOnly();
 
     public Herausgeber Herausgeber { get; set; }
 
