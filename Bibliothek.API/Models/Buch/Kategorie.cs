@@ -1,6 +1,6 @@
-﻿namespace Bibliothek.API.Models.Buecher;
+﻿namespace Bibliothek.API.Models.Buch;
 
-public class Categorie
+public class Kategorie
 {
     public int Id { get; set; }
     public string Name { get; set; }
