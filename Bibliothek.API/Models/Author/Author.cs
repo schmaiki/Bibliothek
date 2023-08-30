@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Bibliothek.API.Models.Buch;
+namespace Bibliothek.API.Models.Author;
 
 public class Author
 {
@@ -9,9 +9,9 @@ public class Author
     
     [MaxLength(100)]
     [Required]
-    public string Vorname { get; set; }
+    public string Vorname { get; set; } = String.Empty;
     
     [MaxLength(100)]
     [Required]
-    public string Nachname { get; set; }
+    public string Nachname { get; set; } = String.Empty;
 }

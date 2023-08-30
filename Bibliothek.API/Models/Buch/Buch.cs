@@ -22,5 +22,5 @@ public class Buch
 
     public Sprache Sprache { get; set; }
 
-    public Author Author { get; set; }
+    public Author.Author Author { get; set; }
 }
