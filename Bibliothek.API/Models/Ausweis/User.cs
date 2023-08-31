@@ -20,6 +20,7 @@ public class User
     public string Geburtsname { get; set; } = String.Empty;
 
     [DataType(DataType.Date)]
+    [NotMapped]
     public DateOnly Geburtsdatum { get; set; }
 
     [MaxLength(20)]
@@ -47,11 +48,11 @@ public class User
     public string Telefonnummer { get; set; }
 
     [DataType(DataType.Date)]
+    [NotMapped]
     public DateOnly Aufenthaltsgenehmigung { get; set; }
 
     [MaxLength(100)]
     public string Nationalitaet { get; set; } = String.Empty;
 
-    [InverseProperty("User")]
-    public virtual ICollection<Buch.Buch> Buch { get; set; } = new HashSet<Buch.Buch>();
+    public virtual ICollection<Buch.Buch> Buch { get; set; } = new List<Buch.Buch>();
 }

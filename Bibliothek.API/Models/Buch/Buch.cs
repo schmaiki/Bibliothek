@@ -14,9 +14,14 @@ public class Buch
     [Required]
     public string Titel { get; set; } = String.Empty;
 
-    [Required] public ISBN ISBN { get; set; } = new ISBN("978-1-234567-89-0");
+    [Required]
+    [MaxLength(20)]
+    public string ISBN { get; set; } = String.Empty;
 
-    [Required] [DataType(DataType.Date)] public DateOnly Erscheinungsdatum { get; set; } = new DateOnly();
+    [Required]
+    [NotMapped]
+    [DataType(DataType.Date)]
+    public DateOnly Erscheinungsdatum { get; set; } = new DateOnly();
 
     public Herausgeber Herausgeber { get; set; }
 
@@ -26,6 +31,5 @@ public class Buch
 
     public Author.Author Author { get; set; }
 
-    [InverseProperty("User")]
-    public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

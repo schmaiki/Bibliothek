@@ -4,6 +4,7 @@ public class ISBN
 {
     private readonly string _value;
 
+    public ISBN() { }
     public ISBN(string value)
     {
         if (IsValidISBN(value))
